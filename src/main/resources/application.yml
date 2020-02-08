@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://company.ccboodh3a3pw.us-east-2.rds.amazonaws.com:5432/company
+    username: thetechmini
+    password: password
+    
+  #jpa:
+  #  hibernate:
+  #    ddl-auto: create
+      
+  liquibase:
+    change-log: classpath:db/changelog/db-changelog-master.yaml

@@ -1,0 +1,9 @@
+databaseChangeLog:
+    - include:
+        file: db/changelog/changes/create_tables.yaml
+    - include:
+        file : db/changelog/changes/category_isactive_field.yaml
+    - include:
+        file : db/changelog/changes/product_isactive_field.yaml
+    - include:
+        file: db/changelog/changes/create_tables_users.yaml

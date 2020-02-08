@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Suresh
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: isactive
+                  type: Integer
+            tableName: category
+

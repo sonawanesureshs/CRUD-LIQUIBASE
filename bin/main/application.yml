@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/productstore
+    username: admin
+    password: krawler
+    
+  jpa:
+    hibernate:
+      ddl-auto: create
+      
+  liquibase: #liquibase changelog properties
+    change-log: classpath:db/changelog/db-changelog-master.yaml

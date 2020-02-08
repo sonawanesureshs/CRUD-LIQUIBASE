@@ -1,0 +1,47 @@
+databaseChangeLog:
+  - changeSet:
+        id: create_category_table
+        author: Suresh
+        changes:
+          - createTable:
+              tableName: category
+              columns:
+                - column:
+                    name: id
+                    type: Integer
+                    constraints:
+                      primaryKey: true
+                      primaryKeyName: pk_category
+                - column:
+                    name: name
+                    type: varchar(50)
+                - column:
+                    name: description
+                    type: varchar(50)
+
+  - changeSet:
+      id: create_product_table
+      author: Suresh
+      changes:
+        - createTable:
+            tableName: product
+            columns:
+              - column:
+                  name: id
+                  type: Integer
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_product
+              - column:
+                  name: name
+                  type: varchar(50)
+              - column:
+                  name: description
+                  type: varchar(50)
+              - column:
+                  name: category
+                  type: Integer
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_category_product
+                    references: category(id)
